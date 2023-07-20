@@ -12,20 +12,14 @@ The WiDS Datathon 2023 focuses on a prediction task involving forecasting sub-se
 #### Objective
 To predict the arithmetic mean of the maximum and minimum temperature over the next 14 days, for each location and start date.
 
-## Dataset Dictionary
-
-- #### Temperature
-Daily maximum and minimum temperature measurements.<br>
-*tmp2m = (tmax +tmin)/2**
-
-- #### Variable naming
+#### Variable naming
 Each variable name, prefix__suffix, consists of two parts (separated by a double underscore) that inform you of the meaning of the variable. The prefix indicates from which of the above-listed file the variable was derived (e.g. Madden-Julian oscillation, pressure, and potential evaporation from NOAA's surface_gauss etc), the suffix indicates the specific type of information that was extracted from the file.
 
-- #### Variable Prefixes
+#### Variable Prefixes
 
 - **contest-slp-14d**: file containing sea level pressure (slp)<br>
 
-- *nmme0-tmp2m-34w*: file containing most recent monthly NMME model forecasts for tmp2m (cancm30,cancm40, ccsm30, ccsm40, cfsv20, gfdlflora0, gfdlflorb0, gfdl0, nasa0,nmme0mean) and average forecast across those models (nmme0mean)<br>
+- **nmme0-tmp2m-34w**: file containing most recent monthly NMME model forecasts for tmp2m (cancm30,cancm40, ccsm30, ccsm40, cfsv20, gfdlflora0, gfdlflorb0, gfdl0, nasa0,nmme0mean) and average forecast across those models (nmme0mean)<br>
 
 - **contest-pres-sfc-gauss-14d**: pressure<br>
 
@@ -79,5 +73,5 @@ Some variables do not have a prefix. Instead, each variable name in its entirely
 - **sst**: sea surface temperature<br>
 - **icec**: sea ice concentration<br>
 - **cancm30, cancm40, ccsm30, ccsm40, cfsv20, gfdlflora0, gfdlflorb0, gfdl0, nasa0, nmme0mean**: most recent forecasts from weather models<br>
-- #### Target
+#### Target
 - **contest-tmp2m-14d__tmp2m**: the arithmetic mean of the max and min observed temperature over the next 14 days for each location and start date, computed as (measured max temperature + measured mini temperature) / 2
